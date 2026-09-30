@@ -12,6 +12,8 @@ programas\_carro.rar -> arquivo comprimido contendo os códigos do Arduino que c
 
 carro.xlsm -> planilha do Excel que envia os comandos para o carrinho se movimentar, registra os dados e plota alguns gráficos
 
+bibliotecas.zip -> arquivo comprimido contendo todas as bibliotecas necessárias para o projeto
+
 
 
 
@@ -20,5 +22,5 @@ Para conseguir enviar os comandos usando a planilha, é necessário habilitar a 
 
 
 
-
+Para instalar as bibliotecas usando os arquivos .zip disponibilizados: https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries/
 
