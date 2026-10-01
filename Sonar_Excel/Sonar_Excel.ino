@@ -24,7 +24,7 @@
 //*******DEFINIÇÃO DE VARIAVEIS
 //char Letra [] = {'A','B','C','D'};  //Colunas do Excel
 int i,opcao;
-float Distancia,DDistancia[100],Tempo[100];    //*****GASTOU 71% DA MEMORIA
+float Distancia,DDistancia[100],Tempo[100];
 unsigned long int ttempo, tempo_inicial,tempo_final;
 int NPontos = 50;      //*****NUMERO DE POSNTOS A SEREM COLETADOS
 int metodo = 1;        //*****ESPECIFICA O TIPO DE MOVIMENTO DO CARRO (CASE QUE MOVIMENTARA O CARRO)
@@ -35,8 +35,6 @@ float Vel_Som = 0.0385;
 struct tipoPacote         //****PACOTE DE VARIAVEIS PARA O RADIO
 { 
     int  valor1;           //****NUMERO INTEIRO
-//  char valor2;          //****LETRA
-//  float valor3;         //****NUMERO COM DECIMAL
 };
 tipoPacote pacote; 
 //****************************************************
@@ -154,39 +152,6 @@ case 'B':
             opcao=100;    
             break;
 
-
-          case 'C': //*****NÃO ESTAMOS USANDO
-
-               Serial.println("RESETROW");
-               digitalWrite(LED_01, HIGH);
-               delay(1000);
-      /*         
-               jj=1;
-             
-              for( i=0; i < N_Pontos; i= i+1)
-                    {
-                         Sen = 5.0*pow(2.71,(-i/1000.0))*sin(i/5.0);
-                         Serial.print("CELL,SET,");
-                         Serial.print (Letra [2]);    //(*C*)
-                         Serial.print (jj);
-                         Serial.print(",");
-                         Serial.println (i);
-                         
-                         Serial.print("CELL,SET,");      //(*D*)
-                         Serial.print (Letra [3]);
-                         Serial.print (jj);
-                         Serial.print(",");
-                         Serial.println (Sen,2);   
-                         jj=jj+1;            
-
-                    }
-       */             
-                        digitalWrite(LED_01, LOW);
-                        opcao=100;       
-                        break;
-
-
-
               case 'D':    
                         //************ZERANDO A PLANILHA******************
                         digitalWrite(LED_01, HIGH);
@@ -263,53 +228,3 @@ case 'B':
      }
 
 }       
-
-   
-/*
-void TRANSMITE(int metodo) 
-{
-  digitalWrite(LED, HIGH);     //****ASCENDE O LED 
- 
-  pacote.valor1 = int metodo;
-
-  vw_send((uint8_t *)&pacote, sizeof(pacote));  //****ENVIA PELO TRANSMISSOR OS DADOS
-  vw_wait_tx();                                 //****ESPERA A TRANSMISSÃO ACABAR
-  
-  digitalWrite(LED, LOW);                    //****DESLIGA O LED SINALIZADOR
-  delay(200);
-}
-*/
-
-
-//*****************************************************************************
-//***********************************APOIO*************************************
-//*****************************************************************************
-/*
-   case 'B': //****NÃO ESTAMOS USANDO
-      
-             Serial.println("RESETROW");
-             digitalWrite(LED, HIGH);
-             delay(1000);
-            
-             jj=1;
-             
-             for( i=0; i < N_Pontos; i= i+1)
-                    {
-                         Seno=10.0*sin(i/5.0);
-                         Serial.print("CELL,SET,");//Especifica a Celula do Excel
-                         Serial.print (Letra [0]);//Especifica a Coluna  (*A*)
-                         Serial.print (jj);//Especifica a Linha
-                         Serial.print(",");
-                         Serial.println (i);//Envia o Dado pata a Celula Especificada
-                         Serial.print("CELL,SET,");
-                         Serial.print (Letra [1]);     //(*B*)
-                         Serial.print (jj);
-                         Serial.print(",");
-                         Serial.println (Seno,2);    
-                         jj=jj+1;     //Evolução das Linhas            
-                   }
-                   
-                        digitalWrite(LED, LOW);
-                        opcao=100;       
-                        break;
- */      
