@@ -18,7 +18,7 @@ bibliotecas.zip -> arquivo comprimido contendo todas as bibliotecas necessárias
 
 
 
-Para conseguir enviar os comandos usando a planilha, é necessário habilitar a função de macros do Excel: https://support.microsoft.com/pt-br/office/vba/enable-or-disable-macros-in-microsoft-365-files
+Para a planilha funcionar, é necessário habilitar a função de macros do Excel: https://support.microsoft.com/pt-br/office/vba/enable-or-disable-macros-in-microsoft-365-files
 
 
 
